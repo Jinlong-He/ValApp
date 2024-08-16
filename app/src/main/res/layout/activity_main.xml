@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".STD_1">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_activity"
+        android:background="@drawable/shape"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:id="@+id/rl_lm"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/tv_lm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Launch Mode:"
+                android:textSize="15sp"
+                tools:ignore="MissingConstraints" />
+            <RadioGroup
+                android:id="@+id/radioGroup_lm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_lm"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STD"
+                    android:tag="lm"
+                    android:id="@+id/lm_std" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STP"
+                    android:tag="lm"
+                    android:id="@+id/lm_stp" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STK"
+                    android:tag="lm"
+                    android:id="@+id/lm_stk" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIT"
+                    android:tag="lm"
+                    android:id="@+id/lm_sit" />
+            </RadioGroup>
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:textSize="25sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=""-->
+<!--                tools:layout_editor_absoluteX="161dp"-->
+<!--                tools:layout_editor_absoluteY="416dp"-->
+<!--                android:layout_toRightOf="@id/radioGroup_lm"-->
+<!--                tools:ignore="MissingConstraints" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_aft"
+            android:layout_marginVertical="5dp"
+
+            android:layout_toRightOf="@+id/rl_lm"
+            android:layout_marginLeft="20dp"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/tv_aft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Affinity:"
+                android:textSize="15sp"
+                tools:ignore="MissingConstraints" />
+            <RadioGroup
+                android:id="@+id/radioGroup_aft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_aft"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:tag="lm"
+                    android:id="@+id/aft_1" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:tag="lm"
+                    android:id="@+id/aft_2" />
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_aft"
+            android:id="@+id/rl_flag"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Intent Flag:"
+
+                android:textSize="15sp"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/flag_stp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:checked="false"
+                android:tag="flag"
+                android:text="STP" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CTP"
+                android:id="@+id/flag_ctp"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_stp"
+                android:layout_marginTop="15dp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CTK"
+                android:id="@+id/flag_ctk"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_ctp"
+                android:layout_marginTop="15dp"
+                />
+
+            <CheckBox
+                android:id="@+id/flag_rtf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/flag_ctk"
+                android:tag="flag"
+                android:text="RTF" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NTK"
+                android:id="@+id/flag_ntk"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_rtf"
+                android:layout_marginTop="15dp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MTK"
+                android:id="@+id/flag_mtk"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_ntk"
+                android:layout_marginTop="15dp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOH"
+                android:id="@+id/flag_toh"
+                android:tag="flag"
+                android:layout_below="@+id/flag_stp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NDM"
+                android:id="@+id/flag_ndm"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_toh"
+                android:layout_below="@+id/flag_stp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RTN"
+                android:id="@+id/flag_rtn"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_ndm"
+                android:layout_below="@+id/flag_stp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PIT"
+                android:id="@+id/flag_pit"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_rtn"
+                android:layout_below="@+id/flag_stp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NHT"
+                android:id="@+id/flag_nht"
+                android:tag="flag"
+                android:layout_toRightOf="@+id/flag_pit"
+                android:layout_below="@+id/flag_stp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_flag"
+            android:id="@+id/rl_start_act"
+            tools:ignore="MissingConstraints">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_finish"
+                tools:ignore="MissingConstraints">
+                <TextView android:text="FinishActivity:"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+
+                    android:id="@+id/tv_finish"
+                    tools:ignore="MissingConstraints" />
+                <RadioGroup
+                    android:id="@+id/radioGroup_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_finish"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="yes"
+                        android:tag="lm"
+                        android:id="@+id/finish_1" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="no"
+                        android:tag="lm"
+                        android:id="@+id/finish_0" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_start"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginLeft="120dp"
+                android:layout_toRightOf="@+id/rl_finish"
+                android:text="Start Activity" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_config"
+            android:layout_below="@+id/rl_activity"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/tv_tc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Current:"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/tv_tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Tasks:"
+                android:layout_below="@+id/tv_tc"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
